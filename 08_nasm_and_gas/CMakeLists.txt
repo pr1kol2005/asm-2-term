@@ -14,5 +14,9 @@ foreach(SOURCE ${SOURCES})
         add_executable(${TARGET_NAME} ${SOURCE})
     elseif(${SOURCE} MATCHES "\\.s$")
         add_executable(${TARGET_NAME} ${SOURCE})
+        set_target_properties(${TARGET_NAME} PROPERTIES
+        LINKER_LANGUAGE C
+        COMPILE_FLAGS "-x assembler-with-cpp"
+        )
     endif()
 endforeach()
