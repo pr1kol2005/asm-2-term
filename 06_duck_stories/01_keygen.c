@@ -3,9 +3,8 @@
 #include <stdlib.h>
 
 int main() {
-  uint32_t key = 0;
-  scanf("%u", &key);
-  printf("%u", key - 100501);
-
+  long long key = 0;
+  scanf("%lld", &key);
+  printf("%lld\n", 7530ll - key);
   return EXIT_SUCCESS;
 }
